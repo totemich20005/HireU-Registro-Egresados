@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de egresados | HIRE-U</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111214;
+            color: white;
+            min-height: 100vh;
+            padding: 35px 15px;
+        }
+
+        .contenedor {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            display: inline-flex;
+            width: 65px;
+            height: 65px;
+            background: #ea7b1a;
+            color: #111214;
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 30px;
+        }
+
+        .encabezado p {
+            color: #b8b8b8;
+            margin-top: 10px;
+        }
+
+        .formulario {
+            background: #1b1d21;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #34373d;
+        }
+
+        h2 {
+            color: #ea7b1a;
+            margin-bottom: 25px;
+        }
+
+        .campos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .completo {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            background: #111214;
+            border: 1px solid #41444b;
+            border-radius: 8px;
+            padding: 13px;
+            color: white;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ea7b1a;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            background: #ea7b1a;
+            border: none;
+            border-radius: 9px;
+            color: #111214;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff9236;
+        }
+
+        .mensaje {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #173b2b;
+            color: #8ef0b5;
+            line-height: 1.5;
+        }
+
+        .nota {
+            color: #aaa;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .campos {
+                grid-template-columns: 1fr;
+            }
+
+            .completo {
+                grid-column: auto;
+            }
+
+            .formulario {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <header class="encabezado">
+        <div class="logo">H</div>
+        <h1>Únete a HIRE-U</h1>
+        <p>Conecta tu talento con nuevas oportunidades profesionales.</p>
+    </header>
+
+    <form
+    class="formulario"
+    id="formularioRegistro"
+    action="guardar_egresado.php"
+    method="POST"
+    enctype="multipart/form-data">
+        <h2>Registro de egresado</h2>
+
+        <div class="campos">
+
+            <div class="campo">
+                <label for="Nombre">Nombre *</label>
+                <input type="text" id="Nombre" name="Nombre"
+                       maxlength="100" required>
+            </div>
+
+            <div class="campo">
+                <label for="Apellido">Apellido</label>
+                <input type="text" id="Apellido" name="Apellido"
+                       maxlength="100">
+            </div>
+
+            <div class="campo completo">
+                <label for="CorreoInstitucional">
+                    Correo institucional *
+                </label>
+                <input type="email" id="CorreoInstitucional"
+                       name="CorreoInstitucional"
+                       maxlength="150" required>
+            </div>
+
+            <div class="campo">
+                <label for="ProgramaAcademico">
+                    Programa académico
+                </label>
+                <input type="text" id="ProgramaAcademico"
+                       name="ProgramaAcademico" maxlength="100">
+            </div>
+
+            <div class="campo">
+                <label for="AnioGraduacion">
+                    Año de graduación
+                </label>
+                <input type="number" id="AnioGraduacion"
+                       name="AnioGraduacion" min="1901" max="2155">
+            </div>
+
+            <div class="campo completo">
+                <label for="FotoPerfil">Foto de perfil</label>
+                <input type="file" id="FotoPerfil" name="FotoPerfil"
+                       accept="image/png,image/jpeg,image/webp">
+            </div>
+
+            <div class="campo completo">
+                <label for="PerfilProfesional">
+                    Perfil profesional
+                </label>
+                <textarea id="PerfilProfesional"
+                          name="PerfilProfesional"
+                          maxlength="5000"
+                          placeholder="Describe tus habilidades, experiencia y objetivos profesionales..."></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit">Crear mi perfil</button>
+
+        <div class="mensaje" id="mensaje"></div>
+
+        <p class="nota">
+            Los campos marcados con * son obligatorios.
+            Tu identificador se genera automáticamente en MySQL.
+        </p>
+
+    </form>
+
+</div>
+
+
+<script>
+document.getElementById("formularioRegistro").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formulario = this;
+    const mensaje = document.getElementById("mensaje");
+
+    mensaje.style.display = "block";
+    mensaje.textContent = "Guardando registro...";
+
+    try {
+       const respuesta = await fetch("guardar_egresado.php", {
+    method: "POST",
+    body: new FormData(formulario)
+});
+
+      
+        const texto = await respuesta.text();
+
+        if (!respuesta.ok) {
+            throw new Error(texto || "Error HTTP " + respuesta.status);
+        }
+
+        mensaje.textContent = texto;
+
+        if (texto.includes("¡Registro exitoso!")) {
+            formulario.reset();
+        }
+
+    } catch (error) {
+        mensaje.textContent = "Error al guardar: " + error.message;
+        console.error(error);
+    }
+});
+</script>
+</body>
+</html>
