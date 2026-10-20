@@ -1,158 +1,164 @@
-# 🎓 HIRE-U | Registro de Egresados
+# HIRE-U | Comunidad de Egresados y Oportunidades Profesionales
 
-<p align="center">
-  <img src="docs/img/hireu-banner.png" alt="HIRE-U - Registro de egresados" width="800">
-</p>
+**HIRE-U** es un proyecto académico de desarrollo de software orientado a fortalecer la conexión entre los egresados de la Universidad de San Buenaventura y el mundo profesional mediante herramientas digitales para el registro de perfiles y la futura integración de oportunidades laborales.
 
-<p align="center">
-  <strong>Conectando el talento profesional con nuevas oportunidades.</strong>
-</p>
+El proyecto busca facilitar la organización de la información académica y profesional de los egresados, promoviendo una comunidad conectada con nuevas posibilidades de crecimiento.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-</p>
+---
 
-## 📌 Descripción del proyecto
+## Descripción del proyecto
 
-**HIRE-U** es un proyecto de desarrollo de software orientado a la gestión y el registro de egresados universitarios. Su propósito es facilitar la recopilación de información académica y profesional para apoyar la construcción de una comunidad de egresados y, a futuro, conectarla con oportunidades laborales.
+HIRE-U propone una plataforma web con una interfaz moderna, accesible y adaptable a diferentes dispositivos. Su identidad visual utiliza principalmente tonos naranja, negro y gris, buscando transmitir innovación, profesionalismo y confianza.
 
-Este repositorio contiene el módulo de registro de egresados, desarrollado con HTML, CSS y JavaScript para la interfaz, PHP para el procesamiento de los datos y MySQL para su almacenamiento.
+Actualmente, el repositorio incluye una página de presentación del proyecto y un módulo de registro de egresados conectado a una base de datos MySQL mediante PHP.
 
-## 🎯 Objetivos
+## Objetivos
 
-- Crear un formulario de registro sencillo y accesible.
-- Registrar información personal, académica y profesional.
-- Almacenar los datos en una base de datos MySQL.
-- Permitir la carga de fotografías de perfil.
-- Sentar las bases para futuras funcionalidades de la plataforma HIRE-U.
+- Facilitar el registro de egresados universitarios.
+- Recopilar información personal, académica y profesional.
+- Almacenar los registros en una base de datos.
+- Promover una comunidad profesional vinculada a la universidad.
+- Establecer una base tecnológica para futuras funcionalidades de conexión laboral.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- 📝 Registro de egresados mediante formulario web.
-- 👤 Captura de nombre y apellido.
-- 🎓 Registro del correo institucional, programa académico y año de graduación.
-- 📄 Campo para describir el perfil profesional.
-- 🖼️ Carga opcional de fotografía de perfil.
-- 🔗 Envío de datos a un backend desarrollado en PHP.
-- 🗄️ Almacenamiento de registros en la tabla `Egresado` de MySQL.
-- ✅ Mensajes para informar el resultado del registro.
+### Página principal — `inicio.html`
 
-## 🖥️ Capturas de pantalla
+La landing page presenta el propósito y la propuesta de valor de HIRE-U. Incluye:
 
-### Formulario de registro
+- Sección principal con presentación del proyecto.
+- Descripción de los beneficios de la plataforma.
+- Áreas profesionales ilustrativas.
+- Explicación del proceso de registro.
+- Información general sobre HIRE-U.
+- Botones de navegación hacia el formulario.
+- Menú adaptable para dispositivos móviles.
 
-![Formulario de registro HIRE-U](docs/img/formulario-registro.png)
+### Formulario de registro — `index.html`
 
-*Interfaz de registro de egresados.*
+El formulario permite registrar información de los egresados, incluyendo:
 
-### Datos del formulario
+- Nombre y apellido.
+- Correo institucional.
+- Programa académico.
+- Año de graduación.
+- Fotografía de perfil, cuando se proporciona.
+- Descripción del perfil profesional.
 
-![Campos del registro HIRE-U](docs/img/campos-registro.png)
+Los datos se envían a un backend PHP, que procesa la información y la almacena en MySQL.
 
-*Información personal, académica y profesional que se solicita al usuario.*
+### Procesamiento de datos — PHP y MySQL
 
-### Registro exitoso
+El módulo de registro utiliza `conexion.php` para establecer la conexión con la base de datos y `guardar_egresado.php` para procesar los datos enviados por el formulario.
 
-![Confirmación de registro HIRE-U](docs/img/registro-exitoso.png)
+La tabla `Egresado` almacena la información correspondiente al registro.
 
-*Ejemplo de confirmación después de guardar un registro correctamente.*
+> Las tarjetas de áreas profesionales de la landing page son elementos ilustrativos. No representan vacantes activas ni implican que la publicación de ofertas o las postulaciones estén implementadas en esta versión.
 
-> Para visualizar estas imágenes, guarda capturas reales de tu aplicación con los nombres indicados dentro de la carpeta `docs/img/`. Las imágenes deben corresponder a la versión actual del proyecto.
+## Tecnologías utilizadas
 
-## 🛠️ Tecnologías utilizadas
-
-| Tecnología | Uso |
+| Tecnología | Función |
 |---|---|
-| HTML5 | Estructura del formulario |
-| CSS3 | Diseño y estilos visuales |
-| JavaScript | Validación e interacción con el formulario |
-| PHP | Recepción y procesamiento de los datos |
-| MySQL | Almacenamiento de la información |
-| XAMPP | Entorno local de desarrollo |
-| Git y GitHub | Control de versiones y alojamiento del código |
+| HTML5 | Estructura de las páginas web |
+| CSS3 | Diseño visual y adaptación a dispositivos |
+| JavaScript | Interacciones y navegación |
+| PHP | Procesamiento de formularios |
+| MySQL | Almacenamiento de información |
+| XAMPP | Entorno de desarrollo local |
+| Git | Control de versiones |
+| GitHub | Alojamiento del código fuente |
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```text
 Hireu/
+├── inicio.html
 ├── index.html
 ├── conexion.php
 ├── guardar_egresado.php
 ├── uploads/
-├── docs/
-│   └── img/
-│       ├── hireu-banner.png
-│       ├── formulario-registro.png
-│       ├── campos-registro.png
-│       └── registro-exitoso.png
 ├── .gitignore
 └── README.md
 ```
 
-La estructura anterior es una referencia para organizar los archivos. Si tu proyecto tiene carpetas adicionales, conserva las que ya utiliza tu aplicación.
+La estructura puede incluir archivos y carpetas adicionales según la implementación actual del proyecto.
 
-## ⚙️ Instalación y ejecución local
+## Requisitos para ejecutar el proyecto
 
-### 1. Requisitos previos
+Antes de comenzar, se requiere:
 
-- Windows.
-- XAMPP con Apache, PHP y MySQL.
-- MySQL Workbench, opcional para administrar la base de datos.
+- Un equipo con Windows.
+- XAMPP instalado.
+- Apache y MySQL.
+- PHP compatible con la versión instalada de XAMPP.
+- La base de datos `Hireu` configurada en MySQL.
 - Un navegador web.
 
-### 2. Clonar el repositorio
+## Instalación y ejecución local
 
-Abre una terminal y ejecuta:
+### 1. Clonar el repositorio
+
+Ejecuta el siguiente comando en una terminal:
 
 ```bash
 git clone https://github.com/totemich20005/HireU-Registro-Egresados.git
 ```
 
-### 3. Copiar el proyecto en XAMPP
+### 2. Ubicar el proyecto
 
-Mueve o copia la carpeta del repositorio a:
+Copia la carpeta del repositorio en:
 
 ```text
 C:\xampp\htdocs\Hireu
 ```
 
-Comprueba que `index.html`, `conexion.php` y `guardar_egresado.php` estén en la ubicación correcta.
+Verifica que los archivos principales estén en la ubicación correcta.
+
+### 3. Iniciar XAMPP
+
+Abre el panel de control de XAMPP e inicia los servicios:
+
+- Apache
+- MySQL
 
 ### 4. Configurar la base de datos
 
-1. Inicia Apache y MySQL desde XAMPP.
-2. Abre MySQL Workbench o phpMyAdmin.
-3. Crea o importa la base de datos `Hireu` utilizando el script SQL del proyecto, si está incluido.
-4. Verifica que exista la tabla `Egresado` con las columnas utilizadas por el formulario.
+Abre MySQL Workbench o phpMyAdmin y verifica que exista la base de datos `Hireu`, junto con la tabla `Egresado` y las columnas utilizadas por el formulario.
+
+Si tienes el script SQL del proyecto, puedes utilizarlo para crear la estructura necesaria.
 
 ### 5. Configurar la conexión
 
-Edita `conexion.php` para utilizar las credenciales de tu instalación local de MySQL.
+Revisa el archivo `conexion.php` y configura los siguientes datos según tu instalación local:
 
-La configuración debe incluir:
+- Servidor MySQL.
+- Usuario.
+- Contraseña.
+- Nombre de la base de datos.
 
-- Servidor: `localhost`.
-- Usuario: el usuario de MySQL configurado en tu equipo.
-- Contraseña: la correspondiente a ese usuario.
-- Base de datos: `Hireu`.
+No publiques contraseñas ni credenciales privadas en el repositorio.
 
-**Seguridad:** no publiques contraseñas ni credenciales reales en GitHub. Utiliza una configuración local excluida del repositorio y, en producción, variables de entorno o un mecanismo seguro equivalente.
+### 6. Abrir la página principal
 
-### 6. Abrir el formulario
+En el navegador, ingresa a:
 
-En el navegador, visita:
+```text
+http://localhost/Hireu/inicio.html
+```
+
+Desde esta página podrás conocer el proyecto y acceder al formulario de registro.
+
+### 7. Abrir el formulario
+
+Para acceder directamente al registro, visita:
 
 ```text
 http://localhost/Hireu/index.html
 ```
 
-Completa los campos y envía el formulario. Si la conexión y el procesamiento funcionan correctamente, el registro se guardará en la base de datos.
+Completa los campos y envía el formulario. Si Apache, PHP, MySQL y la configuración están correctos, los datos se almacenarán en la base de datos.
 
-### 7. Verificar los registros
+### 8. Comprobar los registros
 
 En MySQL Workbench, ejecuta:
 
@@ -164,43 +170,51 @@ FROM Egresado
 ORDER BY EgresadoId DESC;
 ```
 
-La consulta permite comprobar los registros almacenados.
+Esta consulta permite verificar los registros almacenados.
 
-## 🔒 Consideraciones de seguridad
+## Seguridad y protección de datos
 
-- No incluir contraseñas de MySQL en el repositorio.
-- Validar los datos tanto en el navegador como en el servidor.
-- Verificar el tipo y el tamaño de las imágenes antes de almacenarlas.
-- No publicar fotografías ni información personal real de los egresados.
-- Configurar permisos adecuados para la carpeta de archivos cargados.
-- No utilizar datos de prueba en un entorno de producción sin revisar su privacidad.
+Para proteger el proyecto y la información de sus usuarios, se recomienda:
 
-## 🌐 Publicación del proyecto
+- Excluir credenciales privadas mediante `.gitignore`.
+- Validar los datos tanto en el frontend como en el backend.
+- Limitar los tipos y tamaños de las fotografías.
+- Evitar publicar información personal real.
+- Configurar permisos adecuados para los archivos cargados.
+- Utilizar configuraciones seguras para el entorno de producción.
 
-El repositorio permite consultar el código fuente y su documentación. Sin embargo, **GitHub Pages no ejecuta PHP ni proporciona una base de datos MySQL**.
+**Importante:** `.gitignore` no excluye automáticamente archivos que Git ya está rastreando. Antes de publicar cambios, verifica que `conexion.php` no contenga credenciales privadas dentro de los archivos versionados.
 
-Para que el formulario funcione públicamente, será necesario alojar el frontend, el backend PHP y la base de datos en un servicio compatible y configurar las credenciales de producción de forma segura.
+## Estado actual del proyecto
 
-## 🚀 Mejoras futuras
+HIRE-U se encuentra en desarrollo. Esta versión incluye una landing page informativa y un módulo funcional de registro local conectado a PHP y MySQL.
 
-- Implementar inicio de sesión y autenticación de usuarios.
-- Permitir actualizar la información del perfil.
-- Incorporar consultas y administración de egresados.
-- Integrar el módulo con las ofertas laborales de HIRE-U.
+Las funcionalidades de publicación de vacantes, postulación a ofertas, autenticación de usuarios y administración de perfiles pueden incorporarse progresivamente en futuras etapas.
+
+## Mejoras futuras
+
+- Implementar autenticación y registro de usuarios.
+- Permitir la edición de perfiles profesionales.
+- Incorporar un módulo de publicación de ofertas laborales.
+- Desarrollar funcionalidades de búsqueda y postulación a vacantes.
 - Crear un panel de administración.
-- Mejorar la gestión y validación de fotografías.
-- Implementar medidas adicionales de seguridad y privacidad.
+- Mejorar las medidas de seguridad y privacidad.
+- Desplegar el sistema en un servidor compatible con PHP y MySQL.
 
-## 👨‍💻 Autoría y repositorio
+## Publicación en internet
 
-**Proyecto:** HIRE-U — Registro de Egresados
+GitHub permite almacenar y compartir el código fuente del proyecto. Sin embargo, GitHub Pages no ejecuta PHP ni proporciona una base de datos MySQL.
 
-**Repositorio oficial:** [github.com/totemich20005/HireU-Registro-Egresados](https://github.com/totemich20005/HireU-Registro-Egresados)
+Para que el formulario funcione públicamente, será necesario alojar el backend PHP y la base de datos en un servicio compatible, configurar las credenciales de producción y asegurar la comunicación entre los componentes.
 
-Proyecto académico de desarrollo de software, enfocado en la creación de herramientas digitales para la gestión de egresados y su conexión con oportunidades profesionales.
+## Repositorio oficial
+
+**GitHub:** [HireU-Registro-Egresados](https://github.com/totemich20005/HireU-Registro-Egresados)
+
+**Proyecto:** HIRE-U — Registro de Egresados y Conexión Profesional.
+
+**Propósito:** apoyar a los egresados universitarios mediante herramientas digitales para la organización de su información profesional y la futura conexión con oportunidades laborales.
 
 ---
 
-<p align="center">
-  <strong>HIRE-U — El talento abre puertas.</strong>
-</p>
+**HIRE-U — El talento abre puertas.**
