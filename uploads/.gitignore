@@ -1,0 +1,26 @@
+
+# Credenciales y configuración privada
+conexion.php
+.env
+.env.*
+
+# Archivos de prueba
+probar_conexion.php
+
+# Archivos subidos por los usuarios
+uploads/*
+!uploads/.gitkeep
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
